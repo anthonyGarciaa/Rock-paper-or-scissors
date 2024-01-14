@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+}
+div .narrador-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.narrador{
+    position: relative;
+    top: 160px;
+    color: wheat;
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
+}
+.juego{
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+    border: 5px solid rgba(68, 154, 185, 0.786);
+    border-radius: 10px;
+    padding: 30px;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(89,57,57,1) 100%);
+}
+
+img{
+    width: 150px;
+    transform: rotate(0);
+    transition: transform .3s;
+}
+.juego h3, .juego div{
+    font-size: 40px;
+    font-family: sans-serif;
+    color: wheat;
+    
+}
+.rotate-izquiera{
+    transform: rotate(60deg);
+  
+}
+.rotate-derecha{
+    transform: rotate(-90deg);
+}
+.seleccion{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+ 
+}
+button{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    flex-grow: 1 1;
+}
+button:hover{
+    background-color: wheat;
+}
+@media (max-width:500px) {
+    .seleccion{
+        position: relative;
+        left: 100px;
+    }
+}
