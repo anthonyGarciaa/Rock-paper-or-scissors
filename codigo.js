@@ -19,13 +19,27 @@ const primeraAccion = (elemento, click) => {
    }
 }
 
-piedra.addEventListener("click", e => eleccionMano(piedra.children[0], e.detail))
-papel.addEventListener("click", e => eleccionMano(papel.children[0], e.detail))
-tijera.addEventListener("click", e => eleccionMano(tijera.children[0], e.detail))
+const handleSelect=(e)=>{
+   let sibilings=
+   (e.target.__proto__ === HTMLImageElement.prototype)
+   ?([...e.target.parentElement.parentElement.children])
+   :([...e.target.parentElement.children])
+
+   sibilings.map(el=>el.disabled=true)
+
+   eleccionMano(piedra.children[0])
+
+   setTimeout(()=>sibilings.map(el=>el.disabled=false),4000)
+  
+}
+
+piedra.addEventListener("click",handleSelect)
+papel.addEventListener("click",handleSelect)
+tijera.addEventListener("click",handleSelect)
 
 
 const eleccionMano = (mano) => {
-    
+
    let intervalo = setInterval(() => {
       elegido.setAttribute('class','rotate-izquierda');
       cpu.setAttribute('class','rotate-izquierda');  
