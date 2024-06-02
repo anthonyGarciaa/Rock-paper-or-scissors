@@ -114,9 +114,9 @@ const mostrarSiNoSeTermina = (puntuacionUsuario, puntuacionCpu, punto) => {
 
 const mostrarSiSeTermina = (puntuacionUsuario, puntuacionCpu) => {
   if (puntuacionCpu == 3)
-    narrador.textContent = `Mala suerte, has perdido la partida, elige una opcion para comenzar otra ronda `;
+    narrador.textContent = `Mala suerte, has perdido la partida`;
   else if (puntuacionUsuario == 3)
-    narrador.textContent = `Felicidades, has ganado la partida, elige una opcion para comenzar otra ronda `;
+    narrador.textContent = `Felicidades, has ganado la partida`;
 
   if (puntuacionUsuario == 3 || puntuacionCpu == 3) {
     setTimeout(() => {
