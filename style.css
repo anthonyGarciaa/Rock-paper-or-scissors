@@ -53,11 +53,13 @@ img{
     transform: rotate(-90deg);
 }
 .seleccion{
-    width: 100%;
-    margin-top: 0px;
-    margin-bottom: 20px;
     display: flex;
-    justify-content: center;
+    width: 500px;
+    justify-content: space-around;
+    margin: auto;
+    text-align: center;
+    padding-right: 30px;
+    padding-left: 30px;
  
 }
 button{
@@ -70,10 +72,4 @@ button{
 }
 button:hover{
     background-color: wheat;
-}
-@media (max-width:500px) {
-    .seleccion{
-        position: relative;
-        left: 100px;
-    }
 }
